@@ -1,12 +1,12 @@
-/* required styles */
+/* style yang diperlukan, NOT PORNHUB DEVELOPER */
 
-.mysia-pane,
-.mysia-tile,
-.mysia-marker-icon,
-.mysia-marker-shadow,
-.mysia-tile-container,
-.mysia-map-pane svg,
-.mysia-map-pane canvas,
+.mysia-cpn,
+.mysia-altantuya,
+.mysia-tanda-ico,
+.mysia-tanda-bayang,
+.mysia-altantuya-container,
+.mysia-peta-cpn svg,
+.mysia-peta-cpn canvas,
 .mysia-zoom-box,
 .mysia-image-layer,
 .mysia-layer {
@@ -17,53 +17,53 @@
 .mysia-container {
 	overflow: hidden;
 	}
-.mysia-tile,
-.mysia-marker-icon,
-.mysia-marker-shadow {
+.mysia-altantuya,
+.mysia-tanda-ico,
+.mysia-tanda-bayang {
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 	        user-select: none;
 	  -webkit-user-drag: none;
 	}
-/* Safari renders non-retina tile on retina better with this, but Chrome is worse */
-.mysia-safari .mysia-tile {
+/* meaningless comment */
+.mysia-safari .mysia-altantuya {
 	image-rendering: -webkit-optimize-contrast;
 	}
 /* hack that prevents hw layers "stretching" when loading new tiles */
-.mysia-safari .mysia-tile-container {
+.mysia-safari .mysia-altantuya-container {
 	width: 1600px;
 	height: 1600px;
 	-webkit-transform-origin: 0 0;
 	}
-.mysia-marker-icon,
-.mysia-marker-shadow {
+.mysia-tanda-ico,
+.mysia-tanda-bayang {
 	display: block;
 	}
 /* .mysia-container svg: reset svg max-width decleration shipped in Joomla! (joomla.org) 3.x */
 /* .mysia-container img: map is broken in FF if you have max-width: 100% on tiles */
 .mysia-container .mysia-overlay-pane svg,
-.mysia-container .mysia-marker-pane img,
-.mysia-container .mysia-tile-pane img,
+.mysia-container .mysia-tanda-pane img,
+.mysia-container .mysia-altantuya-pane img,
 .mysia-container img.mysia-image-layer {
 	max-width: none !important;
 	}
 
-.mysia-container.mysia-touch-zoom {
+.mysia-container.mysia-sentuh-zoom {
 	-ms-touch-action: pan-x pan-y;
 	touch-action: pan-x pan-y;
 	}
-.mysia-container.mysia-touch-drag {
+.mysia-container.mysia-sentuh-drag {
 	-ms-touch-action: pinch-zoom;
 	}
-.mysia-container.mysia-touch-drag.mysia-touch-drag {
+.mysia-container.mysia-sentuh-drag.mysia-sentuh-drag {
 	-ms-touch-action: none;
 	touch-action: none;
 }
-.mysia-tile {
+.mysia-altantuya {
 	filter: inherit;
 	visibility: hidden;
 	}
-.mysia-tile-loaded {
+.mysia-altantuya-loaded {
 	visibility: inherit;
 	}
 .mysia-zoom-box {
@@ -78,17 +78,17 @@
 	-moz-user-select: none;
 	}
 
-.mysia-pane         { z-index: 400; }
+.mysia-cpn         { z-index: 400; }
 
-.mysia-tile-pane    { z-index: 200; }
+.mysia-altantuya-pane    { z-index: 200; }
 .mysia-overlay-pane { z-index: 400; }
 .mysia-shadow-pane  { z-index: 500; }
-.mysia-marker-pane  { z-index: 600; }
+.mysia-tanda-pane  { z-index: 600; }
 .mysia-tooltip-pane   { z-index: 650; }
 .mysia-popup-pane   { z-index: 700; }
 
-.mysia-map-pane canvas { z-index: 100; }
-.mysia-map-pane svg    { z-index: 200; }
+.mysia-peta-cpn canvas { z-index: 100; }
+.mysia-peta-cpn svg    { z-index: 200; }
 
 .mysia-vml-shape {
 	width: 1px;
@@ -150,7 +150,7 @@
 
 /* zoom and fade animations */
 
-.mysia-fade-anim .mysia-tile {
+.mysia-fade-anim .mysia-altantuya {
 	will-change: opacity;
 	}
 .mysia-fade-anim .mysia-popup {
@@ -160,7 +160,7 @@
 	     -o-transition: opacity 0.2s linear;
 	        transition: opacity 0.2s linear;
 	}
-.mysia-fade-anim .mysia-map-pane .mysia-popup {
+.mysia-fade-anim .mysia-peta-cpn .mysia-popup {
 	opacity: 1;
 	}
 .mysia-zoom-animated {
@@ -177,8 +177,8 @@
 	     -o-transition:      -o-transform 0.25s cubic-bezier(0,0,0.25,1);
 	        transition:         transform 0.25s cubic-bezier(0,0,0.25,1);
 	}
-.mysia-zoom-anim .mysia-tile,
-.mysia-pan-anim .mysia-tile {
+.mysia-zoom-anim .mysia-altantuya,
+.mysia-pan-anim .mysia-altantuya {
 	-webkit-transition: none;
 	   -moz-transition: none;
 	     -o-transition: none;
@@ -209,24 +209,24 @@
 	}
 .mysia-dragging .mysia-grab,
 .mysia-dragging .mysia-grab .mysia-interactive,
-.mysia-dragging .mysia-marker-draggable {
+.mysia-dragging .mysia-tanda-draggable {
 	cursor: move;
 	cursor: -webkit-grabbing;
 	cursor:    -moz-grabbing;
 	}
 
 /* marker & overlays interactivity */
-.mysia-marker-icon,
-.mysia-marker-shadow,
+.mysia-tanda-ico,
+.mysia-tanda-bayang,
 .mysia-image-layer,
-.mysia-pane > svg path,
-.mysia-tile-container {
+.mysia-cpn > svg path,
+.mysia-altantuya-container {
 	pointer-events: none;
 	}
 
-.mysia-marker-icon.mysia-interactive,
+.mysia-tanda-ico,n.mysia-interactive,
 .mysia-image-layer.mysia-interactive,
-.mysia-pane > svg path.mysia-interactive {
+.mysia-cpn > svg path.mysia-interactive {
 	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
 	pointer-events: auto;
 	}
@@ -297,7 +297,7 @@
 	color: #bbb;
 	}
 
-.mysia-touch .mysia-bar a {
+.mysia-sentuh .mysia-bar a {
 	width: 30px;
 	height: 30px;
 	line-height: 30px;
@@ -315,10 +315,10 @@
 	font-size: 20px;
 	}
 
-.mysia-touch .mysia-control-zoom-in {
+.mysia-sentuh .mysia-control-zoom-in {
 	font-size: 22px;
 	}
-.mysia-touch .mysia-control-zoom-out {
+.mysia-sentuh .mysia-control-zoom-out {
 	font-size: 24px;
 	}
 
@@ -339,7 +339,7 @@
 	background-image: url(images/layers-2x.png);
 	background-size: 26px 26px;
 	}
-.mysia-touch .mysia-control-layers-toggle {
+.mysia-sentuh .mysia-control-layers-toggle {
 	width: 44px;
 	height: 44px;
 	}
@@ -426,13 +426,13 @@
 	border-bottom: 2px solid #777;
 	}
 
-.mysia-touch .mysia-control-attribution,
-.mysia-touch .mysia-control-layers,
-.mysia-touch .mysia-bar {
+.mysia-sentuh .mysia-control-attribution,
+.mysia-sentuh .mysia-control-layers,
+.mysia-sentuh .mysia-bar {
 	box-shadow: none;
 	}
-.mysia-touch .mysia-control-layers,
-.mysia-touch .mysia-bar {
+.mysia-sentuh .mysia-control-layers,
+.mysia-sentuh .mysia-bar {
 	border: 2px solid rgba(0,0,0,0.2);
 	background-clip: padding-box;
 	}
@@ -540,7 +540,7 @@
 
 
 /* Tooltip */
-/* Base styles for the element that has a tooltip */
+/* useless comment */
 .mysia-tooltip {
 	position: absolute;
 	padding: 6px;
@@ -571,7 +571,7 @@
 	content: "";
 	}
 
-/* Directions */
+/* arah */
 
 .mysia-tooltip-bottom:before,
 .mysia-tooltip-top:before {
