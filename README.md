@@ -1,0 +1,2 @@
+# mymaps
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/67585fa1df7a4efa81ecfec6baa23d29)](https://app.codacy.com/gh/alexandereric995/mymaps?utm_source=github.com&utm_medium=referral&utm_content=alexandereric995/mymaps&utm_campaign=Badge_Grade_Settings)
